@@ -1,0 +1,53 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+        </div>
+        <div class="mx-auto order-0">
+            <a class="navbar-brand mx-auto" href="/"><i class="fas fa-fire-alt"></i></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapse-bar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div id="collapse-bar" class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/crew">Crew</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/equipment">Equipment</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- The grid -->
+
+<div class="container" id="cards">
+        <div class="col">
+            <div class="card mb-3">
+                <div class="row">
+                    <div class="col-md-12">
+                        {{#each Personnel}}
+                             <a role="button" id= "add-new-button" class="btn btn-primary text-white my-3" href="/add-certs/{{uid}}">Add New</a>
+                        {{/each}}
+                        {{#each Certification}}
+                        <div class="card mb-4">
+                            <div class="card-header"><b>Certification</b>
+                            </div>
+                            <div class="card-body">
+                             <b>Type: </b>{{certType}}<hr>
+                             <b>Issued: </b>{{dateIssued}}<hr>
+                             <b>Expires: </b>{{expDate}}<hr>
+                             <a role="button" id="edit-button" class="btn btn-primary text-white" href="/edit-certs/{{certId}}">Edit</a>
+                            </div>
+                        </div>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
