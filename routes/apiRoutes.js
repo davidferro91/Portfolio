@@ -1,5 +1,3 @@
-var db = require("../models");
-
 module.exports = function(app) {
   // Get all personnel
   app.get("/api/personnel", function(req, res) {

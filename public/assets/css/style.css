@@ -1,0 +1,12 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-image: url("/assets/images/america-analysis-business-926987.jpg");
+  background-size: cover;
+}
+
+main {
+  flex: 1 0 auto;
+}
+    
